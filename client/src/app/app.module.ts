@@ -13,12 +13,15 @@ import { MatInputModule } from '@base/node_modules/@angular/material/input';
 import { MatCardModule } from '@base/node_modules/@angular/material/card';
 import { HeaderComponent } from '@components/header/header.component';
 import { MatToolbarModule } from '@base/node_modules/@angular/material/toolbar';
+import { PostListComponent } from './components/post-list/post-list.component';
+import { MatExpansionModule } from '@base/node_modules/@angular/material/expansion';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostCreateComponent,
     HeaderComponent,
+    PostListComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { MatToolbarModule } from '@base/node_modules/@angular/material/toolbar';
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

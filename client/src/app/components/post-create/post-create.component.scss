@@ -1,12 +1,14 @@
-.mat-card {
-  margin: auto;
-  width: 600px;
+:host {
+  margin: 1rem auto;
+  display: block;
 
-  .mat-form-field {
-    width: 100%;
-  }
+  .mat-card {
+    .mat-form-field {
+      width: 100%;
+    }
 
-  .mat-card-content, .mat-card-footer-text {
-    margin: 0 16px;
+    .mat-card-content, .mat-card-footer-text {
+      margin: 0 1rem;
+    }
   }
 }
