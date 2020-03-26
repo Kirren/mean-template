@@ -1,4 +1,4 @@
-<mat-accordion>
+<mat-accordion *ngIf="posts.length > 0; else noPostsText">
   <mat-expansion-panel *ngFor="let post of posts">
     <mat-expansion-panel-header>
       <mat-panel-title>
@@ -11,3 +11,7 @@
     </p>
   </mat-expansion-panel>
 </mat-accordion>
+
+<ng-template #noPostsText>
+  <p>No posts stored yet!</p>
+</ng-template>
