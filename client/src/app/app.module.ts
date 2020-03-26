@@ -11,11 +11,14 @@ import { MatFormFieldModule } from '@base/node_modules/@angular/material/form-fi
 import { MatButtonModule } from '@base/node_modules/@angular/material/button';
 import { MatInputModule } from '@base/node_modules/@angular/material/input';
 import { MatCardModule } from '@base/node_modules/@angular/material/card';
+import { HeaderComponent } from '@components/header/header.component';
+import { MatToolbarModule } from '@base/node_modules/@angular/material/toolbar';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostCreateComponent
+    PostCreateComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +28,8 @@ import { MatCardModule } from '@base/node_modules/@angular/material/card';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
-    MatCardModule
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
