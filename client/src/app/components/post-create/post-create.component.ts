@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Post } from '@app/interfaces/post';
 
 @Component({
   selector: 'app-post-create',
@@ -6,14 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./post-create.component.scss']
 })
 export class PostCreateComponent {
-  newPost: string = '';
-  enteredValue: string = '';
+  enteredTitle: string;
+  enteredContent: string;
 
-  showPreview: boolean = false;
 
   onSavePost(): void {
-    this.newPost = this.enteredValue;
-    this.showPreview = true;
+    const newPost: Post = {
+      title: this.enteredTitle,
+      content: this.enteredContent
+    };
   }
 
 }
