@@ -24,4 +24,8 @@ export class AppComponent {
       'content': 'Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.'
     }
   ];
+
+  addNewPost(post) {
+    this.posts.push(post);
+  }
 }
