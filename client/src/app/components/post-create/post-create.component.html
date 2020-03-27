@@ -1,19 +1,30 @@
 <mat-card>
-  <mat-card-header>
-    <mat-card-title>Create a new post!</mat-card-title>
-    <mat-card-subtitle>Enter whatever you prefer - but politely!</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your post title</mat-label>
-      <input matInput [(ngModel)]="enteredTitle" type="text">
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your post here</mat-label>
-      <textarea matInput [(ngModel)]="enteredContent" rows="6"></textarea>
-    </mat-form-field>
-  </mat-card-content>
-  <mat-card-actions class="mat-card-footer-text">
-    <button mat-raised-button (click)="onSavePost()">Save Post</button>
-  </mat-card-actions>
+  <form (ngSubmit)="onSavePost()">
+    <mat-card-header>
+      <mat-card-title>Create a new post!</mat-card-title>
+      <mat-card-subtitle>Enter whatever you prefer - but politely!</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your post title</mat-label>
+        <input
+          matInput
+          name="title"
+          type="text"
+          ngModel>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your post here</mat-label>
+        <textarea
+          matInput
+          rows="6"
+          name="content"
+          ngModel
+        ></textarea>
+      </mat-form-field>
+    </mat-card-content>
+    <mat-card-actions class="mat-card-footer-text">
+      <button mat-raised-button>Save Post</button>
+    </mat-card-actions>
+  </form>
 </mat-card>

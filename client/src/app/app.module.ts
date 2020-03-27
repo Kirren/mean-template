@@ -17,25 +17,25 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { MatExpansionModule } from '@base/node_modules/@angular/material/expansion';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PostCreateComponent,
-    HeaderComponent,
-    PostListComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatButtonModule,
-    MatInputModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatExpansionModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		PostCreateComponent,
+		HeaderComponent,
+		PostListComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		BrowserAnimationsModule,
+		MatFormFieldModule,
+		MatButtonModule,
+		MatInputModule,
+		MatCardModule,
+		MatToolbarModule,
+		MatExpansionModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

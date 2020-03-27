@@ -1,6 +1,6 @@
 {
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended", "tslint-consistent-codestyle", "tslint-config-airbnb"],
+  "extends": ["tslint:recommended", "tslint-consistent-codestyle"],
   "rules": {
     "arrow-return-shorthand": true,
     "callable-types": true,
