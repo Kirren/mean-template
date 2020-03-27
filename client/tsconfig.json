@@ -18,7 +18,6 @@
     "outDir": "./dist/out-tsc",
     "paths": {
       "@app/*": ["src/app/*"],
-      "@base/*": ["src/../*"],
       "@common/*": ["src/app/common/*"],
       "@components/*": ["src/app/components/*"],
       "@guards/*": ["src/app/guards/*"],
