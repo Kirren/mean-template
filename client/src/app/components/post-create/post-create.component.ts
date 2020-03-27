@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { Post } from '@app/interfaces/post';
+import { IPost } from '@app/interfaces/IPost';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
 	selector: 'app-post-create',
@@ -7,26 +8,26 @@ import { Post } from '@app/interfaces/post';
 	styleUrls: ['./post-create.component.scss']
 })
 export class PostCreateComponent {
-	public enteredTitle: string;
-	public enteredContent: string;
+	public postForm: FormGroup;
 
 	@Output()
-	public handleSavePost = new EventEmitter<Post>();
+	public handleSavePost = new EventEmitter<IPost>();
+
+	constructor() {
+		this.postForm = new FormGroup({
+			title: new FormControl(''),
+			content: new FormControl(''),
+		});
+	}
 
 	public onSavePost(): void {
-		const newPost: Post = {
-			title: this.enteredTitle,
-			content: this.enteredContent
+		const newPost: IPost = {
+			title: this.postForm.value.title,
+			content: this.postForm.value.content
 		};
 
 		this.handleSavePost.emit(newPost);
 
-		this.clearFields();
+		this.postForm.reset();
 	}
-
-	public clearFields(): void {
-		this.enteredTitle = '';
-		this.enteredContent = '';
-	}
-
 }

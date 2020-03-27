@@ -1,5 +1,5 @@
 <mat-card>
-  <form (ngSubmit)="onSavePost()">
+  <form [formGroup]="postForm" (ngSubmit)="onSavePost()">
     <mat-card-header>
       <mat-card-title>Create a new post!</mat-card-title>
       <mat-card-subtitle>Enter whatever you prefer - but politely!</mat-card-subtitle>
@@ -9,17 +9,15 @@
         <mat-label>Enter your post title</mat-label>
         <input
           matInput
-          name="title"
-          type="text"
-          ngModel>
+          formControlName="title"
+          type="text">
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Enter your post here</mat-label>
         <textarea
           matInput
           rows="6"
-          name="content"
-          ngModel
+          formControlName="content"
         ></textarea>
       </mat-form-field>
     </mat-card-content>
