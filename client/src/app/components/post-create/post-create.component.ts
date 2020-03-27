@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { IPost } from '@app/interfaces/IPost';
 import { FormControl, FormGroup } from '@angular/forms';
+import { PostsService } from '@services/posts.service';
 
 @Component({
 	selector: 'app-post-create',
@@ -10,13 +11,10 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class PostCreateComponent {
 	public postForm: FormGroup;
 
-	@Output()
-	public handleSavePost = new EventEmitter<IPost>();
-
-	constructor() {
+	constructor(private _postsService: PostsService) {
 		this.postForm = new FormGroup({
 			title: new FormControl(''),
-			content: new FormControl(''),
+			content: new FormControl('')
 		});
 	}
 
@@ -26,7 +24,7 @@ export class PostCreateComponent {
 			content: this.postForm.value.content
 		};
 
-		this.handleSavePost.emit(newPost);
+		this._postsService.addPost(newPost);
 
 		this.postForm.reset();
 	}

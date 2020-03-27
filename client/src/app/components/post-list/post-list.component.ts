@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { PostsService } from '@services/posts.service';
+import { IPost } from '@app/interfaces/IPost';
 
 @Component({
 	selector: 'app-post-list',
@@ -6,5 +8,9 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['./post-list.component.scss']
 })
 export class PostListComponent {
-	@Input('posts') public posts;
+	public posts: IPost[];
+
+	constructor(private _postsService: PostsService) {
+		this.posts = this._postsService.getPosts();
+	}
 }
