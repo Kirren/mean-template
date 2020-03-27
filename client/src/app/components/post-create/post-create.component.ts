@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IPost } from '@app/interfaces/IPost';
 import { FormControl, FormGroup } from '@angular/forms';
+import { IPost } from '@app/interfaces/IPost';
 import { PostsService } from '@services/posts.service';
 
 @Component({
