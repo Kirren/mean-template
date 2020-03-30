@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --liveReload=true",
+    "start": "ng serve --liveReload=true --ssl=true",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint --fix=true",
